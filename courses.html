@@ -1,32 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Courses - Mark's First Aid Training</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Courses — Excellentia Training Academy Ltd</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700,800&display=swap" rel="stylesheet">
+  <meta name="description" content="Classroom and e-learning courses in first aid, mental health and fire safety. Group bookings and in-house delivery available." />
+  <style>
+    /* Small, safe adjustments to make the two buttons larger and match existing button styles.
+       If you prefer these rules in style.css, copy them there instead. */
+    .button.large {
+      padding: 0.85rem 1.05rem;
+      font-size: 1.05rem;
+      border-radius: 10px;
+    }
+
+    /* Ensure the button group keeps tidy spacing on narrow screens */
+    .course-type-controls { display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap; }
+  </style>
 </head>
-<body>
-  <header>
-    <h1>Our First Aid Courses</h1>
-    <p>Choose the right training for your needs</p>
-  </header>
+<body class="page-courses">
+  <div class="container">
+    <header>
+      <img src="images/logo.png" alt="Excellentia Training Academy Ltd Logo" class="logo" />
+      <h1>Excellentia Training Academy Ltd</h1>
+      <p class="tagline">Professional First Aid, Mental Health & Fire Safety Training Across the UK</p>
+    </header>
 
-  <section>
-    <h2>Available Courses</h2>
-    <ul>
-      <li><strong>Emergency First Aid at Work</strong> – £75 – 1 day</li>
-      <li><strong>Paediatric First Aid</strong> – £85 – 2 days</li>
-      <li><strong>Basic Life Support</strong> – £50 – Half day</li>
-    </ul>
-  </section>
+    <nav>
+      <ul class="nav" role="menubar" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html" class="active">Courses</a></li>
+        <li><a href="in-house.html">In-House Training</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="refunds.html">Refund + Cancellation</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
 
-  <section>
-    <a href="index.html">← Back to Home</a>
-  </section>
+    <main class="layout">
+      <div class="content">
+        <section class="lead card">
+          <h2>Courses — Clear, practical and accredited</h2>
+          <p>Choose from classroom and e‑learning courses. Each course lists duration, who it's for and a starting price to help you pick the right option quickly. Group bookings and in‑house delivery available — request a quote via the contact page.</p>
+        </section>
 
-  <footer>
-    <p>© 2025 Mark's First Aid Training</p>
-  </footer>
+        <!-- Selector: Classroom / E-Learning -->
+        <section class="card" aria-label="Course type selector">
+          <div class="course-type-controls" role="tablist" aria-label="Course type">
+            <!-- Larger buttons to match site buttons -->
+            <button id="btn-classroom" class="button secondary large active" data-filter="classroom" role="tab" aria-selected="true" aria-controls="courses-list">Classroom</button>
+            <button id="btn-elearning" class="button secondary large" data-filter="elearning" role="tab" aria-selected="false" aria-controls="courses-list">E‑Learning</button>
+          </div>
+        </section>
+
+        <!-- Courses list -->
+        <section class="card" id="courses-list" aria-label="Course list">
+          <h2 id="all-courses">All Courses</h2>
+
+          <!-- First Aid -->
+          <div class="course-group" id="first-aid">
+            <h3>First Aid Courses</h3>
+            <div class="course-grid">
+              <article id="ea1" class="course classroom" data-type="classroom">
+                <h4><a href="course-ea1.html">Level 3 Emergency First Aid at Work (1 Day)</a></h4>
+                <p class="muted">1 day • Practical life-saving skills • From £95</p>
+                <p>Suitable for low-risk workplaces and individuals wanting core first aid competence.</p>
+                <a class="secondary" href="course-ea1.html">View course</a>
+              </article>
+
+              <article id="fa3" class="course classroom" data-type="classroom">
+                <h4><a href="course-fa3.html">Level 3 First Aid at Work (3 Days)</a></h4>
+                <p class="muted">3 days • Comprehensive workplace qualification • From £280</p>
+                <p>In-depth training with practical assessment for higher-risk workplaces.</p>
+                <a class="secondary" href="course-fa3.html">View course</a>
+              </article>
+
+              <article id="fa-requal" class="course classroom" data-type="classroom">
+                <h4><a href="course-fa-requal.html">Level 3 First Aid at Work Requalification (2 Days)</a></h4>
+                <p class="muted">2 days • Requalification • From £220</p>
+                <p>Refresher and requalification for current first aiders to retain certification.</p>
+                <a class="secondary" href="course-fa-requal.html">View course</a>
+              </article>
+
+              <article id="paed" class="course blended" data-type="classroom">
+                <h4><a href="course-paed.html">Level 3 Paediatric First Aid (Classroom Day + E‑Learning)</a></h4>
+                <p class="muted">Blended • Classroom day + online component • From £160</p>
+                <p>Paediatric-focused practical skills for childcare staff and parents.</p>
+                <a class="secondary" href="course-paed.html">View course</a>
+              </article>
+
+              <article id="bld" class="course classroom" data-type="classroom">
+                <h4><a href="course-bld.html">Level 2 Basic Life Support & Automated External Defibrillator</a></h4>
+                <p class="muted">Practical session • Recommended for all staff</p>
+                <p>Hands-on CPR and AED training to build confidence in using a defibrillator.</p>
+                <a class="secondary" href="course-bld.html">View course</a>
+              </article>
+            </div>
+          </div>
+
+          <!-- Mental Health -->
+          <div class="course-group" id="mental-health">
+            <h3>Mental Health First Aid</h3>
+            <div class="course-grid">
+              <article id="mh1" class="course classroom" data-type="classroom">
+                <h4><a href="course-mh1.html">Level 1 Mental Health Awareness in the Workplace (1/2 Day)</a></h4>
+                <p class="muted">Half day • Awareness</p>
+                <p>Introductory course to spot early signs and signpost support.</p>
+                <a class="secondary" href="course-mh1.html">View course</a>
+              </article>
+
+              <article id="mh2" class="course classroom" data-type="classroom">
+                <h4><a href="course-mh2.html">Level 2 First Aid for Mental Health (1 Day)</a></h4>
+                <p class="muted">1 day • Practical support techniques</p>
+                <p>Practical skills to support someone in distress and develop confident responses.</p>
+                <a class="secondary" href="course-mh2.html">View course</a>
+              </article>
+
+              <article id="mh3" class="course classroom" data-type="classroom">
+                <h4><a href="course-mh3.html">Level 3 Supervising First Aid for Mental Health</a></h4>
+                <p class="muted">Advanced supervisory-level course</p>
+                <p>For managers who oversee mental health first aiders and workplace policy.</p>
+                <a class="secondary" href="course-mh3.html">View course</a>
+              </article>
+            </div>
+          </div>
+
+          <!-- Manual Handling -->
+          <div class="course-group" id="manual-handling">
+            <h3>Manual Handling</h3>
+            <div class="course-grid">
+              <article id="mh-princ" class="course classroom" data-type="classroom">
+                <h4><a href="course-mh-princ.html">Level 2 Principles of Manual Handling</a></h4>
+                <p class="muted">Theory and practical safe techniques</p>
+                <p>Essential knowledge for reducing injuries when lifting and handling.</p>
+                <a class="secondary" href="course-mh-princ.html">View course</a>
+              </article>
+
+              <article id="mh-safe" class="course classroom" data-type="classroom">
+                <h4><a href="course-mh-safe.html">Level 2 Safe Moving and Handling</a></h4>
+                <p class="muted">Practical session for moving people safely</p>
+                <p>Hands-on instruction for care staff and settings where moving people is required.</p>
+                <a class="secondary" href="course-mh-safe.html">View course</a>
+              </article>
+            </div>
+          </div>
+
+          <!-- Fire Safety -->
+          <div class="course-group" id="fire-safety">
+            <h3>Fire Safety</h3>
+            <div class="course-grid">
+              <article id="fm" class="course classroom" data-type="classroom">
+                <h4><a href="course-fm.html">Fire Marshal Training</a></h4>
+                <p class="muted">Half day • Practical marshal duties</p>
+                <p>Practical fire safety, evacuation procedures and marshal responsibilities.</p>
+                <a class="secondary" href="course-fm.html">View course</a>
+              </article>
+
+              <article id="fs1" class="course classroom" data-type="classroom">
+                <h4><a href="course-fs1.html">Level 1 Fire Safety Awareness</a></h4>
+                <p class="muted">Short awareness session</p>
+                <p>Basic fire safety information for staff awareness and prevention strategies.</p>
+                <a class="secondary" href="course-fs1.html">View course</a>
+              </article>
+            </div>
+          </div>
+
+          <!-- E-Learning -->
+          <div class="course-group" id="elearning">
+            <h3>E‑Learning Courses</h3>
+            <div class="course-grid">
+              <article id="e1" class="course elearning" data-type="elearning">
+                <h4><a href="course-e1.html">Annual First Aid Refresher (Online)</a></h4>
+                <p class="muted">Fully online • Self-paced</p>
+                <p>Quick refresher for existing first aiders to maintain awareness between full qualifications.</p>
+                <a class="secondary" href="course-e1.html">View course</a>
+              </article>
+
+              <article id="e2" class="course elearning" data-type="elearning">
+                <h4><a href="course-e2.html">Family First Aid (Online)</a></h4>
+                <p class="muted">Online • Parent-focused first aid</p>
+                <p>Practical guidance for parents and carers to keep children safe.</p>
+                <a class="secondary" href="course-e2.html">View course</a>
+              </article>
+
+              <article id="e3" class="course elearning" data-type="elearning">
+                <h4><a href="course-e3.html">Fire Safety for Early Years (Online)</a></h4>
+                <p class="muted">Online • Sector-specific guidance</p>
+                <p>Fire safety tailored for early years settings and staff responsible for children’s safety.</p>
+                <a class="secondary" href="course-e3.html">View course</a>
+              </article>
+
+              <article id="e4" class="course elearning" data-type="elearning">
+                <h4><a href="course-e4.html">First Aid for Parents (Online)</a></h4>
+                <p class="muted">Online • Practical parent skills</p>
+                <p>Short interactive modules covering common childhood incidents and basic emergency response.</p>
+                <a class="secondary" href="course-e4.html">View course</a>
+              </article>
+
+              <article id="e5" class="course elearning" data-type="elearning">
+                <h4><a href="course-e5.html">Risk Assessment for Early Years (Online)</a></h4>
+                <p class="muted">Online • Practical risk assessment techniques</p>
+                <p>Practical course supporting staff to carry out simple, effective risk assessments in early years settings.</p>
+                <a class="secondary" href="course-e5.html">View course</a>
+              </article>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="sticky">
+          <div class="card popular">
+            <h3>Quick Book / Request</h3>
+            <p class="muted">Prefer a quick quote for a team? Request a date and delegate count and we’ll respond promptly.</p>
+            <a class="button full" href="contact.html">Request a Quote</a>
+            <a class="secondary full" href="in-house.html" style="margin-top:0.5rem;">In‑House Training</a>
+          </div>
+
+          <div class="card" style="margin-top:0.9rem;">
+            <h4>Need a bespoke course?</h4>
+            <p class="muted">We tailor content for sector-specific risks, age groups and organisational policies.</p>
+            <a class="secondary full" href="contact.html">Get a Bespoke Quote</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© 2025 Excellentia Training Academy Ltd | Bolton, UK</p>
+    </footer>
+
+    <script>
+      // ---------- Filter buttons (Classroom / E-learning) ----------
+      (function () {
+        const btnClassroom = document.getElementById('btn-classroom');
+        const btnElearning = document.getElementById('btn-elearning');
+        const courses = document.querySelectorAll('#courses-list .course');
+
+        function applyFilter(filter) {
+          courses.forEach(c => {
+            const t = c.dataset.type || 'classroom';
+            c.style.display = (filter === 'all' || filter === t) ? '' : 'none';
+          });
+          // show/hide the elearning heading block when filtering
+          const eleBlock = document.getElementById('elearning');
+          if (eleBlock) eleBlock.style.display = (filter === 'all' || filter === 'elearning') ? '' : 'none';
+        }
+
+        function setActive(button) {
+          // remove active from both then add to the selected
+          btnClassroom.classList.remove('active');
+          btnElearning.classList.remove('active');
+
+          btnClassroom.setAttribute('aria-selected', 'false');
+          btnElearning.setAttribute('aria-selected', 'false');
+
+          button.classList.add('active');
+          button.setAttribute('aria-selected', 'true');
+        }
+
+        btnClassroom.addEventListener('click', () => {
+          setActive(btnClassroom);
+          applyFilter('classroom');
+        });
+        btnElearning.addEventListener('click', () => {
+          setActive(btnElearning);
+          applyFilter('elearning');
+        });
+
+        // default view: classroom on desktop, all on small screens
+        const defaultView = (window.innerWidth > 900) ? 'classroom' : 'all';
+        if (defaultView === 'classroom') { btnClassroom.click(); } else { applyFilter('all'); }
+      })();
+    </script>
+  </div>
 </body>
 </html>
