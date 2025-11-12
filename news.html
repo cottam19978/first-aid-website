@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News — Excellentia Training Academy Ltd</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="News, updates and announcements from Excellentia Training Academy Ltd — new courses, opening hours and guidance for first aid, mental health and fire safety." />
+  <style>
+    /* Small helper styles for the news layout (merge into style.css if preferred) */
+    .card { background:#fff; border-radius:10px; border:1px solid #eef6ff; padding:1rem; box-shadow:0 6px 20px rgba(18,43,77,0.06); }
+    .muted { color:#6b7b88; }
+    .small { font-size:0.9rem; }
+    .button.primary { background:#0b6fff; color:#fff; padding:0.55rem 0.85rem; border-radius:8px; border:none; font-weight:600; }
+    .button.secondary { border:1px solid #d7eaf8; background:transparent; padding:0.45rem 0.7rem; border-radius:8px; color:#0b2b3f; font-weight:600; }
+    @media (max-width:900px) { .layout { grid-template-columns: 1fr; } .sidebar { width:100% !important; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images/logo.png" alt="Excellentia Training Academy Ltd Logo" class="logo" />
+      <h1>News</h1>
+      <p class="tagline">Updates on courses, guidance and company announcements to help you stay safe and compliant</p>
+    </header>
+
+    <nav>
+      <ul class="nav" role="menubar" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="in-house.html">In-House Training</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="refunds.html">Refund + Cancellation</a></li>
+        <li><a href="news.html" class="active">News</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
+
+    <main class="layout" style="display:grid; grid-template-columns: 1fr 320px; gap:1.25rem; align-items:start;">
+      <div class="content">
+        <section class="card">
+          <h2 style="margin-top:0;">Latest news & updates</h2>
+          <p class="muted">Helpful updates about new courses, calendar changes and sector guidance. Sign up for occasional news by email.</p>
+
+          <div style="display:grid; gap:1rem; margin-top:1rem;">
+            <article class="card" style="padding:1rem;">
+              <header style="display:flex; justify-content:space-between; align-items:baseline; gap:1rem;">
+                <h3 style="margin:0;">New Paediatric Course Dates Added</h3>
+                <time datetime="2025-11-10" class="muted small">10 Nov 2025</time>
+              </header>
+              <p class="muted" style="margin:0.6rem 0;">We’ve added additional December dates for our Level 3 Paediatric First Aid classroom + e‑learning course to meet demand from nurseries and childminders. <a href="course-paed.html">See course details and book</a>.</p>
+            </article>
+
+            <article class="card" style="padding:1rem;">
+              <header style="display:flex; justify-content:space-between; align-items:baseline; gap:1rem;">
+                <h3 style="margin:0;">Christmas Opening Hours</h3>
+                <time datetime="2025-11-01" class="muted small">01 Nov 2025</time>
+              </header>
+              <p class="muted" style="margin:0.6rem 0;">Our offices and public courses will be closed on 25–26 December. If you require urgent group booking assistance, see our contact page for emergency options.</p>
+            </article>
+
+            <article class="card" style="padding:1rem;">
+              <header style="display:flex; justify-content:space-between; align-items:baseline; gap:1rem;">
+                <h3 style="margin:0;">HSE Guidance Reminder: Annual First Aid Refreshers</h3>
+                <time datetime="2025-09-18" class="muted small">18 Sep 2025</time>
+              </header>
+              <p class="muted" style="margin:0.6rem 0;">The HSE recommends annual refreshers to maintain first aider confidence. Our 2‑hour online Annual First Aid Refresher is a CPD-accredited option for workplaces.</p>
+            </article>
+          </div>
+
+          <div style="display:flex; justify-content:flex-end; margin-top:1rem;">
+            <a class="button secondary" href="news-archive.html">View archive</a>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3 style="margin-top:0;">Editorial & publishing notes</h3>
+          <p class="muted">We publish occasional updates about course dates, policy reminders and company news. If you'd like to suggest an item for consideration, contact our team via the contact page.</p>
+        </section>
+      </div>
+
+      <aside class="sidebar" style="width:320px;">
+        <div class="sticky">
+          <div class="card">
+            <h4>Recent posts</h4>
+            <ul style="margin:0; padding:0; list-style:none;">
+              <li style="margin:0 0 0.6rem;"><a href="news.html#">New Paediatric Course Dates Added</a><br/><span class="muted small">10 Nov 2025</span></li>
+              <li style="margin:0 0 0.6rem;"><a href="news.html#">Christmas Opening Hours</a><br/><span class="muted small">01 Nov 2025</span></li>
+              <li style="margin:0 0 0.6rem;"><a href="news.html#">HSE Guidance Reminder</a><br/><span class="muted small">18 Sep 2025</span></li>
+            </ul>
+          </div>
+
+          <div class="card" style="margin-top:0.9rem;">
+            <h4>Subscribe for updates</h4>
+            <p class="muted small">Get notified when we add course dates, publish guidance or announce offers. Occasional emails only.</p>
+
+            <form id="subscribe-form" style="display:flex; gap:0.6rem; margin-top:0.6rem;">
+              <input id="subscribe-email" type="email" placeholder="Your email address" required style="flex:1; padding:0.55rem 0.7rem; border:1px solid #d7eaf8; border-radius:8px; background:#fbfdff;" />
+              <button type="submit" class="button primary">Subscribe</button>
+            </form>
+            <p id="subscribe-status" class="muted small" style="margin-top:0.6rem; display:none;"></p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© 2025 Excellentia Training Academy Ltd | Bolton, UK</p>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Excellentia Training Academy Ltd",
+      "url": "https://www.excellentia-training.co.uk",
+      "logo": "https://www.excellentia-training.co.uk/images/logo.png",
+      "sameAs": []
+    }
+    </script>
+
+    <script>
+      (function () {
+        const subscribeForm = document.getElementById('subscribe-form');
+        const subscribeStatus = document.getElementById('subscribe-status');
+
+        subscribeForm?.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const email = document.getElementById('subscribe-email').value.trim();
+          if (!email) {
+            subscribeStatus.style.display = 'block';
+            subscribeStatus.style.color = '#c00';
+            subscribeStatus.textContent = 'Please enter a valid email address.';
+            return;
+          }
+          subscribeStatus.style.display = 'block';
+          subscribeStatus.style.color = '#0a6';
+          subscribeStatus.textContent = 'Subscribing…';
+          // Replace with your mailing list API integration.
+          setTimeout(function () {
+            subscribeStatus.textContent = 'Subscribed — check your email to confirm.';
+          }, 700);
+        });
+      })();
+    </script>
+  </div>
+</body>
+</html>

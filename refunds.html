@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Refunds & Cancellation — Excellentia Training Academy Ltd</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Clear refunds and cancellation policy for public courses, in-house bookings and online purchases from Excellentia Training Academy Ltd." />
+  <style>
+    /* Small helpers — copy into style.css if preferred */
+    .card { background:#fff; border-radius:10px; border:1px solid #eef6ff; padding:1rem; box-shadow:0 6px 20px rgba(18,43,77,0.06); }
+    .muted { color:#6b7b88; }
+    .small { font-size:0.95rem; }
+    .policy-table { width:100%; border-collapse:collapse; margin-top:0.6rem; }
+    .policy-table td, .policy-table th { padding:0.55rem; border:1px solid #eef6ff; }
+    .policy-table th { text-align:left; background:#fbfdff; font-weight:700; }
+    .button { display:inline-block; padding:0.55rem 0.9rem; border-radius:8px; text-decoration:none; font-weight:600; }
+    .button.primary { background:#0b6fff; color:#fff; border:none; }
+    @media (max-width:900px) { .layout { grid-template-columns:1fr; } .sidebar { width:100% !important; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images/logo.png" alt="Excellentia Training Academy Ltd Logo" class="logo" />
+      <h1>Refunds & Cancellation</h1>
+      <p class="tagline">Fair, transparent and simple guidance on cancelling, transferring or requesting refunds</p>
+    </header>
+
+    <nav>
+      <ul class="nav" role="menubar" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="in-house.html">In-House Training</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="refunds.html" class="active">Refund + Cancellation</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
+
+    <main class="layout" style="display:grid; grid-template-columns:1fr 320px; gap:1.25rem; align-items:start;">
+      <div class="content">
+        <section class="card">
+          <h2 style="margin-top:0;">Policy overview</h2>
+          <p class="muted">We aim to be fair and transparent. This policy covers public course bookings, in‑house bookings and online purchases. If you need help, contact our team and include your booking reference.</p>
+        </section>
+
+        <section class="card">
+          <h3 style="margin-top:0;">Cancellation by a delegate</h3>
+          <p class="muted">If you need to cancel, please notify us in writing (email is fine). Refunds are processed to the original payment method after approval.</p>
+
+          <table class="policy-table" aria-label="Delegate cancellation refunds">
+            <thead>
+              <tr><th>Timing</th><th>Refund / Action</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>More than 14 days before course</td><td>Full refund (less any card fees)</td></tr>
+              <tr><td>7–14 days before course</td><td>50% refund</td></tr>
+              <tr><td>Less than 7 days before course</td><td>No refund unless place is re‑sold</td></tr>
+            </tbody>
+          </table>
+
+          <p class="muted small" style="margin-top:0.6rem;">Transfers to another date are permitted up to 7 days before the course, subject to availability. Transfer requests should include the delegate name, original date and preferred new date.</p>
+        </section>
+
+        <section class="card">
+          <h3 style="margin-top:0;">Online course purchases</h3>
+          <p class="muted">For e‑learning courses and licences purchased online, we offer a cooling-off period aligned with consumer rights where applicable. If you have issues accessing content, contact support and we’ll resolve access or provide a refund per the consumer regulations.</p>
+        </section>
+
+        <section class="card">
+          <h3 style="margin-top:0;">Cancellation by Excellentia Training Academy Ltd</h3>
+          <p class="muted">We may cancel a course due to low bookings, trainer illness, venue issues or other unforeseen circumstances. If we cancel, you will be offered either:</p>
+          <ul class="muted">
+            <li>A full refund to your original payment method, or</li>
+            <li>Transfer to an alternative date at no extra charge</li>
+          </ul>
+          <p class="muted small">We will notify you as soon as possible and process refunds within 14 working days of agreement.</p>
+        </section>
+
+        <section class="card">
+          <h3 style="margin-top:0;">How refunds are processed</h3>
+          <p class="muted">Approved refunds are issued to the original payment method and typically take up to 14 working days to appear depending on the card issuer or payment provider.</p>
+          <p class="muted">If you paid by invoice, refunds may be issued by bank transfer; contact accounts for details.</p>
+        </section>
+
+        <section class="card">
+          <h3 style="margin-top:0;">Exceptional circumstances</h3>
+          <p class="muted">If you or a close family member are unwell or an emergency prevents attendance, contact us with evidence (e.g., medical note) and we will consider refunds or transfers on a discretionary basis.</p>
+        </section>
+
+        <section class="card">
+          <h3 style="margin-top:0;">Disputes and further help</h3>
+          <p class="muted">If you have a concern about a refund decision, contact our customer service team and we will review the case promptly. For unresolved consumer disputes, external advice bodies are available.</p>
+        </section>
+      </div>
+
+      <aside class="sidebar" style="width:320px;">
+        <div class="sticky">
+          <div class="card">
+            <h4>Quick contact</h4>
+            <p class="muted small"><strong>Bookings & refunds:</strong><br/><a href="mailto:bookings@excellentia-training.co.uk">bookings@excellentia-training.co.uk</a></p>
+            <p class="muted small"><strong>Phone:</strong><br/><a href="tel:01234567890">01234 567890</a></p>
+            <a class="button primary" href="contact.html?enquiry=refund" style="margin-top:0.6rem; display:inline-block;">Request a refund</a>
+          </div>
+
+          <div class="card" style="margin-top:0.9rem;">
+            <h4>Useful notes</h4>
+            <p class="muted small">Please include your booking reference and course date when requesting refunds. Keep receipts and booking confirmations for faster processing.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© 2025 Excellentia Training Academy Ltd | Bolton, UK</p>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Refunds & Cancellation",
+      "description": "Refunds and cancellation policy for public courses, in-house bookings and online purchases from Excellentia Training Academy Ltd."
+    }
+    </script>
+  </div>
+</body>
+</html>
