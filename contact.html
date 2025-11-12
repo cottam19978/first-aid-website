@@ -1,50 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us - Mark's First Aid Training</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Excellentia Training Academy Ltd</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Contact Excellentia Training Academy Ltd for course enquiries, group bookings, e‑learning licences or general support. Based in Bolton, UK." />
+  <style>
+    /* Small, focused form improvements — keep in sync with your main stylesheet */
+    .contact-card {
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid #e6f0fa;
+      box-shadow: 0 6px 20px rgba(18, 43, 77, 0.06);
+      padding: 1.15rem;
+    }
+
+    .contact-form .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .contact-form .field .label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #0b2b3f;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.65rem 0.75rem;
+      border: 1px solid #d7eaf8;
+      border-radius: 8px;
+      background: #fbfdff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      border-color: #4aa3ff;
+      box-shadow: 0 6px 18px rgba(74, 163, 255, 0.12);
+    }
+
+    .contact-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .consent-row {
+      display: flex;
+      gap: 0.65rem;
+      align-items: center;
+      margin-top: 0.45rem;
+    }
+
+    .contact-actions {
+      display:flex;
+      gap:0.75rem;
+      align-items:center;
+      margin-top:0.9rem;
+      flex-wrap:wrap;
+    }
+
+    .button.primary {
+      background:#0b6fff;
+      color:#fff;
+      padding:0.7rem 1rem;
+      border-radius:8px;
+      border:none;
+      cursor:pointer;
+      font-weight:600;
+      box-shadow: 0 8px 20px rgba(11,111,255,0.12);
+    }
+
+    .button.secondary {
+      border:1px solid #d7eaf8;
+      background:transparent;
+      color:#0b2b3f;
+      padding:0.6rem 0.9rem;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    #form-status { margin-top:0.6rem; }
+    @media (max-width:900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      aside { width:100% !important; }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Contact Us</h1>
-    <p>We’d love to hear from you</p>
-  </header>
+  <div class="container">
+    <header>
+      <img src="images/logo.png" alt="Excellentia Training Academy Ltd Logo" class="logo" />
+      <h1>Contact</h1>
+      <p class="tagline">Questions about courses, group bookings, e‑learning or accessibility? We’re here to help.</p>
+    </header>
 
-  <section>
-    <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
-    <p>Phone: 01234 567890</p>
-    <p>Location: <a href="https://www.google.com/maps?q=Bolton" target="_blank">Bolton, UK</a></p>
-  </section>
+    <nav>
+      <ul class="nav" role="menubar" aria-label="Main navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="in-house.html">In-House Training</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="refunds.html">Refund + Cancellation</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
 
-  <section>
-    <h2>Send a Message</h2>
-    <form id="contact-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required />
+    <main class="layout">
+      <div class="content">
 
-      <label for="message">Message:</label>
-      <textarea id="message" rows="5" required></textarea>
+        <section class="card">
+          <div style="display:flex; gap:1rem; align-items:flex-start; flex-wrap:wrap;">
+            <div style="flex:1; min-width:280px;">
+              <h2>Get in touch</h2>
+              <p>Use the form to send a general enquiry, request a group quote, or ask about accessibility and booking. For urgent enquiries mention "URGENT" in the subject and we'll prioritise our response.</p>
 
-      <button type="submit">Send</button>
-    </form>
-  </section>
+              <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:0.6rem;">
+                <div style="flex:1; min-width:180px; border:1px solid #eef6ff; border-radius:8px; padding:0.8rem;">
+                  <strong>Phone</strong>
+                  <p class="muted" style="margin:0.4rem 0;"><a href="tel:01234567890">01234 567890</a></p>
+                  <p class="small muted" style="margin:0;">Mon–Fri 09:00–17:30</p>
+                </div>
 
-  <section>
-    <a href="index.html">← Back to Home</a>
-  </section>
+                <div style="flex:1; min-width:180px; border:1px solid #eef6ff; border-radius:8px; padding:0.8rem;">
+                  <strong>Email</strong>
+                  <p class="muted" style="margin:0.4rem 0;"><a href="mailto:info@excellentia-training.co.uk">info@excellentia-training.co.uk</a></p>
+                  <p class="small muted" style="margin:0;">We aim to reply within 1–2 business days</p>
+                </div>
 
-  <footer>
-    <p>© 2025 Mark's First Aid Training</p>
-  </footer>
+                <div style="flex:1; min-width:180px; border:1px solid #eef6ff; border-radius:8px; padding:0.8rem;">
+                  <strong>Address</strong>
+                  <p class="muted" style="margin:0.4rem 0;">Bolton, Lancashire, UK</p>
+                  <p class="small muted" style="margin:0;">Venues listed per course during booking</p>
+                </div>
+              </div>
+            </div>
 
-  <script>
-    document.getElementById("contact-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Thanks for your message! We'll reply soon.");
-    });
-  </script>
+            <aside style="width:360px; min-width:260px;">
+              <div class="card" style="padding:1rem;">
+                <h3 style="margin-top:0;">Group bookings</h3>
+                <p class="muted">Training at your venue from competitive group prices. Tell us your preferred date, number of delegates and course and we'll send availability and a tailored quote.</p>
+                <a class="button primary full" href="contact.html?enquiry=group">Request a group quote</a>
+              </div>
+
+              <div class="card" style="margin-top:0.9rem; padding:1rem;">
+                <h3 style="margin-top:0;">Accessibility & adjustments</h3>
+                <p class="muted">If delegates need adjustments (physical access, learning support or extra time), tell us when booking and we'll confirm reasonable adjustments.</p>
+                <a class="button secondary full" href="contact.html?enquiry=accessibility">Discuss accessibility</a>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="card contact-card">
+          <h3>Contact form</h3>
+          <p class="muted">Tell us which service you need so we can route your enquiry quickly. Required fields are marked with *</p>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem;" class="contact-grid">
+              <div class="field">
+                <label class="label" for="name">Full name *</label>
+                <input id="name" name="name" type="text" required autocomplete="name" />
+              </div>
+
+              <div class="field">
+                <label class="label" for="email">Email address *</label>
+                <input id="email" name="email" type="email" inputmode="email" required autocomplete="email" />
+              </div>
+
+              <div class="field">
+                <label class="label" for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" inputmode="tel" />
+              </div>
+
+              <div class="field">
+                <label class="label" for="contact_pref">Preferred contact</label>
+                <select id="contact_pref" name="contact_pref" aria-label="Preferred contact method">
+                  <option value="email">Email</option>
+                  <option value="phone">Phone</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field" style="margin-top:0.4rem;">
+              <label class="label" for="enquiry_type">Enquiry type *</label>
+              <select id="enquiry_type" name="enquiry_type" required>
+                <option value="">Select…</option>
+                <option value="general">General enquiry</option>
+                <option value="group">Group booking / in‑house</option>
+                <option value="elearning">E‑learning licences</option>
+                <option value="accessibility">Accessibility adjustments</option>
+                <option value="press">Press / partnerships</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label class="label" for="message">Message *</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <div class="consent-row">
+              <input type="checkbox" id="consent" name="consent" required />
+              <label for="consent" class="small">I agree to be contacted about this enquiry *</label>
+            </div>
+
+            <div class="contact-actions">
+              <button type="submit" class="button primary">Send message</button>
+              <button type="button" class="button secondary" id="clear-form">Clear</button>
+              <p id="form-status" class="muted small" style="display:none;"></p>
+            </div>
+          </form>
+        </section>
+
+        <section class="card">
+          <h3>Office hours & response times</h3>
+          <p class="muted">Phone: Mon–Fri 09:00–17:30. Emails and form enquiries are usually answered within 1–2 business days. Urgent requests will be prioritised where possible.</p>
+
+          <h4>Emergency and immediate medical incidents</h4>
+          <p class="muted">If you are dealing with a medical emergency, call the emergency services immediately. This contact form is not for emergencies.</p>
+        </section>
+
+        <section class="card">
+          <h3>FAQ</h3>
+          <details>
+            <summary>How do I request a bespoke in-house quote?</summary>
+            <p class="muted">Use the form and choose "Group booking / in‑house" and include your preferred dates, delegate numbers and venue postcode.</p>
+          </details>
+
+          <details>
+            <summary>Can I buy bulk e‑learning licences?</summary>
+            <p class="muted">Yes — select "E‑learning licences" in the enquiry type and tell us how many licences you need. We offer admin access and reporting for larger orders.</p>
+          </details>
+
+          <details>
+            <summary>What accessibility adjustments are available?</summary>
+            <p class="muted">We provide reasonable adjustments such as extended breaks, printed materials, assisted technologies and physical access support. Contact us to discuss specifics.</p>
+          </details>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <div class="sticky">
+          <div class="card">
+            <h4>Contact directory</h4>
+            <p class="muted small"><strong>Bookings:</strong> bookings@excellentia-training.co.uk</p>
+            <p class="muted small"><strong>Accounts:</strong> accounts@excellentia-training.co.uk</p>
+            <p class="muted small"><strong>General:</strong> info@excellentia-training.co.uk</p>
+          </div>
+
+          <div class="card" style="margin-top:0.9rem;">
+            <h4>Find a course</h4>
+            <p class="muted small">Prefer to browse? <a href="courses.html">View all courses</a> and use filters to find dates and venues near you.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© 2025 Excellentia Training Academy Ltd | Bolton, UK</p>
+    </footer>
+
+    <!-- Organization structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Excellentia Training Academy Ltd",
+      "url": "https://www.excellentia-training.co.uk",
+      "logo": "https://www.excellentia-training.co.uk/images/logo.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+441234567890",
+          "contactType": "customer service",
+          "areaServed": "GB",
+          "availableLanguage": "English"
+        }
+      ],
+      "sameAs": []
+    }
+    </script>
+
+    <script>
+      (function () {
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+        const clearBtn = document.getElementById('clear-form');
+
+        function showStatus(msg, ok = true) {
+          status.style.display = 'block';
+          status.textContent = msg;
+          status.style.color = ok ? '#0a6' : '#c00';
+        }
+
+        clearBtn?.addEventListener('click', function () {
+          form.reset();
+          status.style.display = 'none';
+        });
+
+        form?.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          // Basic client-side validation
+          const name = document.getElementById('name').value.trim();
+          const email = document.getElementById('email').value.trim();
+          const enquiry = document.getElementById('enquiry_type').value;
+          const message = document.getElementById('message').value.trim();
+          const consent = document.getElementById('consent').checked;
+
+          if (!name || !email || !enquiry || !message || !consent) {
+            showStatus('Please complete all required fields and accept contact consent.', false);
+            return;
+          }
+
+          // Replace with your backend endpoint integration (fetch/AJAX).
+          showStatus('Sending your message…', true);
+
+          // Demo success simulation and redirect to thank-you page.
+          setTimeout(function () {
+            window.location.href = 'thank-you.html';
+          }, 800);
+        });
+      })();
+    </script>
+  </div>
 </body>
 </html>
