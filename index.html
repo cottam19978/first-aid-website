@@ -1,41 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mark's First Aid Training</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Excellentia Training Academy Ltd</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
- <header>
-  <h1>Mark's First Aid Training</h1>
-  <p>Certified courses in Bolton</p>
-  <nav>
-    <a href="courses.html">View Our Courses</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
-</header>
+<body class="home-bg">
+  <div class="container">
+    <header>
+      <img src="images/logo.png" alt="Excellentia Training Academy Ltd Logo" class="logo" />
+      <h1>Excellentia Training Academy Ltd</h1>
+      <p class="tagline">Professional First Aid, Mental Health & Fire Safety Training Across the UK</p>
+    </header>
 
-  <section>
-    <h2>Book a Course</h2>
-    <form id="booking-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required />
+    <nav>
+      <ul class="nav" role="menubar" aria-label="Main navigation">
+        <li role="none"><a role="menuitem" href="index.html" class="active">Home</a></li>
+        <li role="none"><a role="menuitem" href="courses.html">Courses</a></li>
+        <li role="none"><a role="menuitem" href="in-house.html">In-House Training</a></li>
+        <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+        <li role="none"><a role="menuitem" href="refunds.html">Refund + Cancellation</a></li>
+        <li role="none"><a role="menuitem" href="news.html">News</a></li>
+        <li role="none"><a role="menuitem" href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </nav>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" required />
+    <section class="hero" aria-label="Hero">
+      <div class="hero-inner">
+        <h2>UK’s Trusted First Aid & Safety Training Provider</h2>
+        <p>Practical, accredited training for schools, businesses, care settings and members of the public. Book classroom, online or in‑house training with confidence.</p>
+        <div class="hero-ctas">
+          <a class="button" href="courses.html">View Courses</a>
+          <a class="secondary" href="contact.html">Request a Quote</a>
+        </div>
+      </div>
+    </section>
 
-      <label for="date">Preferred Date:</label>
-      <input type="date" id="date" required />
+    <section class="trust-logos compact" aria-label="Accreditations and compliance">
+      <div class="logo-block">
+        <div class="logo-row" role="list">
+          <img src="images/cpd.png" alt="CPD Accredited" />
+          <img src="images/faa.png" alt="FAA Approved" />
+          <img src="images/qualsafe.png" alt="Qualsafe Certified" />
+          <img src="images/hse.png" alt="HSE Compliant" />
+          <img src="images/eyfs.png" alt="EYFS Ready" />
+          <img src="images/ofsted.png" alt="Ofsted Suitable" />
+        </div>
+        <p class="text-center muted" style="margin-top:0.6rem;">CPD accredited courses, recognised awarding bodies, and workplace-appropriate certification.</p>
+      </div>
+    </section>
 
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+    <main class="layout">
+      <div class="content">
+        <section class="lead card">
+          <h2>Training that prepares people to act — when it matters most</h2>
+          <p>Whether you’re a parent, teacher, construction manager or business owner, <strong>Excellentia Training Academy Ltd</strong> delivers clear, practical training that builds competence and confidence. Our courses are created and delivered by experienced instructors with real emergency experience.</p>
+        </section>
 
-  <footer>
-    <p>© 2025 Mark's First Aid Training</p>
-  </footer>
+        <section class="features card" aria-label="Why choose us">
+          <h2>Why Choose Excellentia?</h2>
+          <div class="feature-grid">
+            <div class="feature"><h3>Trusted & Accredited</h3><p>CPD accredited, certificated and suitable for Ofsted/EYFS requirements. We follow HSE guidance and recognised awarding bodies.</p></div>
+            <div class="feature"><h3>Flexible Delivery</h3><p>Public dates, evening and weekend courses, e-learning and in‑house delivery to suit your team and schedule.</p></div>
+            <div class="feature"><h3>Experienced Trainers</h3><p>Trainers with frontline experience who focus on practical skills and scenario-based learning to build lasting confidence.</p></div>
+            <div class="feature"><h3>Transparent Pricing</h3><p>Clear, upfront pricing with group discounts and flexible payment options including Klarna and Clearpay.</p></div>
+            <div class="feature"><h3>Fast Certification</h3><p>Quick turnaround on certificates so your team keeps business continuity and compliance in place.</p></div>
+            <div class="feature"><h3>Tailored Content</h3><p>Courses can be adapted to workplace risk, age group (paediatric), or sector-specific needs.</p></div>
+          </div>
+        </section>
 
-  <script src="script.js"></script>
+        <section class="card testimonials" aria-label="Testimonials">
+          <h2>What clients say</h2>
+
+          <div class="slider" id="testimonial-slider" aria-live="polite">
+            <div class="slide active">
+              <p>"Excellentia's instructors were professional, calm and practical — the whole team left feeling more confident."</p>
+              <small>— Sarah J, Nursery Manager</small>
+            </div>
+            <div class="slide">
+              <p>"Straightforward booking, clear communications and great venue. Highly recommended for workplace training."</p>
+              <small>— Tom H, Facilities Lead</small>
+            </div>
+            <div class="slide">
+              <p>"Trainer tailored the session to our school needs and provided exceptional paediatric scenarios."</p>
+              <small>— Emma R, Headteacher</small>
+            </div>
+            <div class="slide">
+              <p>"Professional and friendly. Certificates arrived within 48 hours. Great service."</p>
+              <small>— James P, Operations Manager</small>
+            </div>
+          </div>
+
+          <div class="testimonials-image-bottom">
+            <img src="images/firstaid.png" alt="First aid training" />
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="sticky">
+          <div class="card">
+            <h3>Quick Enquiry</h3>
+            <p class="muted">Need a quote for an in‑house course or group booking?</p>
+            <a class="button full" href="contact.html?enquiry=quick">Start Quick Enquiry</a>
+            <a class="secondary full" href="in-house.html" style="margin-top:0.5rem;">Why choose in‑house training?</a>
+            <hr style="margin:0.9rem 0; border:none; border-top:1px solid #eee;" />
+            <p class="muted small" style="margin:0 0 0.4rem 0;">Excellentia Training Academy Ltd<br />Bolton, UK</p>
+            <p style="margin:0.2rem 0 0 0;"><strong>Phone:</strong> 01234 567890</p>
+            <p style="margin:0.2rem 0 0 0;"><strong>Email:</strong> info@excellentia-training.co.uk</p>
+          </div>
+
+          <div class="card popular compact-popular" aria-label="Popular courses">
+            <h4>Popular Courses</h4>
+            <ul class="popular-list" role="list">
+              <li><a href="course-ea1.html">Level 3 Emergency First Aid at Work — 1 Day</a></li>
+              <li><a href="course-fa3.html">Level 3 First Aid at Work — 3 Days</a></li>
+              <li><a href="course-paed.html">Level 3 Paediatric First Aid — Blended</a></li>
+              <li><a href="course-mh2.html">Level 2 First Aid for Mental Health — 1 Day</a></li>
+              <li><a href="course-fm.html">Fire Marshal Training — Half Day</a></li>
+            </ul>
+            <p class="muted small" style="margin-top:0.5rem;">Quick links to course pages and detailed info.</p>
+          </div>
+
+          <div class="card newsletter-card" aria-label="Newsletter signup">
+            <h4>Join our newsletter</h4>
+            <p class="muted small">Course dates, discounts and safety tips — once a month.</p>
+            <form id="newsletter-small" class="newsletter-small-form" aria-label="Subscribe to newsletter">
+              <label for="ns-name" class="visually-hidden">Name</label>
+              <input id="ns-name" name="name" type="text" placeholder="Your name" autocomplete="name" />
+              <label for="ns-email" class="visually-hidden">Email</label>
+              <input id="ns-email" name="email" type="email" placeholder="Email address" required autocomplete="email" />
+              <button type="submit" class="button full">Subscribe</button>
+              <p class="muted tiny" style="margin-top:0.45rem;">We respect your privacy. Unsubscribe anytime.</p>
+            </form>
+          </div>
+
+          <div class="card" style="margin-top:0.9rem;">
+            <h4>Venue notes</h4>
+            <p class="muted small">We run public courses at vetted venues across the UK. Exact venue and parking details are shown during checkout for each date.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p>© 2023 Excellentia Training Academy Ltd | Bolton, UK</p>
+      </div>
+    </footer>
+
+    <script>
+      // Newsletter small: placeholder behaviour
+      document.getElementById('newsletter-small')?.addEventListener('submit', function(e){
+        e.preventDefault();
+        const email = document.getElementById('ns-email').value.trim();
+        if(!email) { document.getElementById('ns-email').focus(); return; }
+        this.querySelector('button').textContent = 'Subscribed';
+        this.querySelector('button').disabled = true;
+      });
+
+      // Testimonial slider
+      (function () {
+        const slides = document.querySelectorAll('#testimonial-slider .slide');
+        if(!slides.length) return;
+        let idx = 0;
+        function show(i){
+          slides.forEach((s, j) => s.classList.toggle('active', j === i));
+        }
+        show(0);
+        setInterval(() => {
+          idx = (idx + 1) % slides.length;
+          show(idx);
+        }, 5000);
+      })();
+    </script>
+  </div>
 </body>
 </html>
