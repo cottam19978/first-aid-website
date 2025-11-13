@@ -48,7 +48,7 @@ body {
 /* Header */
 header { text-align: center; padding: 2rem 0 1rem 0; }
 /* Logo size */
-.logo { max-height: 220px; display: inline-block; margin-bottom: 0.4rem; }
+.logo { max-height: 260px; display: inline-block; margin-bottom: 0.4rem; }
 header h1 { margin: 0.2rem 0; font-size: 1.5rem; font-weight: 800; }
 .tagline { color: var(--muted); margin: 0.25rem 0 0.6rem 0; font-size: 1rem; }
 
@@ -205,5 +205,134 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
 
 /* Final nav font-size enforcement for total consistency */
 nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--nav-font-size) !important; font-weight: 800 !important; line-height:1 !important; -webkit-font-smoothing:antialiased !important; }
+
+/* Small, safe adjustments to make the two buttons larger and match existing button styles.
+       If you prefer these rules in style.css, copy them there instead. */
+    .button.large {
+      padding: 0.85rem 1.05rem;
+      font-size: 1.05rem;
+      border-radius: 10px;
+    }
+
+    /* Ensure the button group keeps tidy spacing on narrow screens */
+    .course-type-controls { display:flex; gap:0.75rem; align-items:center; flex-wrap:wrap; }
+
+    /* Small, focused form improvements — keep in sync with your main stylesheet */
+    .contact-card {
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid #e6f0fa;
+      box-shadow: 0 6px 20px rgba(18, 43, 77, 0.06);
+      padding: 1.15rem;
+    }
+
+    .contact-form .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .contact-form .field .label {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #0b2b3f;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.65rem 0.75rem;
+      border: 1px solid #d7eaf8;
+      border-radius: 8px;
+      background: #fbfdff;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus,
+    .contact-form select:focus {
+      border-color: #4aa3ff;
+      box-shadow: 0 6px 18px rgba(74, 163, 255, 0.12);
+    }
+
+    .contact-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .consent-row {
+      display: flex;
+      gap: 0.65rem;
+      align-items: center;
+      margin-top: 0.45rem;
+    }
+
+    .contact-actions {
+      display:flex;
+      gap:0.75rem;
+      align-items:center;
+      margin-top:0.9rem;
+      flex-wrap:wrap;
+    }
+
+    .button.primary {
+      background:#0b6fff;
+      color:#fff;
+      padding:0.7rem 1rem;
+      border-radius:8px;
+      border:none;
+      cursor:pointer;
+      font-weight:600;
+      box-shadow: 0 8px 20px rgba(11,111,255,0.12);
+    }
+
+    .button.secondary {
+      border:1px solid #d7eaf8;
+      background:transparent;
+      color:#0b2b3f;
+      padding:0.6rem 0.9rem;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    #form-status { margin-top:0.6rem; }
+    @media (max-width:900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      aside { width:100% !important; }
+    }
+
+        /* Small helpers — copy into style.css if preferred */
+    .card { background:#fff; border-radius:10px; border:1px solid #eef6ff; padding:1rem; box-shadow:0 6px 20px rgba(18,43,77,0.06); }
+    .muted { color:#6b7b88; }
+    .small { font-size:0.95rem; }
+    .policy-table { width:100%; border-collapse:collapse; margin-top:0.6rem; }
+    .policy-table td, .policy-table th { padding:0.55rem; border:1px solid #eef6ff; }
+    .policy-table th { text-align:left; background:#fbfdff; font-weight:700; }
+    .button { display:inline-block; padding:0.55rem 0.9rem; border-radius:8px; text-decoration:none; font-weight:600; }
+    .button.primary { background:#0b6fff; color:#fff; border:none; }
+    @media (max-width:900px) { .layout { grid-template-columns:1fr; } .sidebar { width:100% !important; } }
+
+    /* Small helper styles for the news layout (merge into style.css if preferred) */
+    .card { background:#fff; border-radius:10px; border:1px solid #eef6ff; padding:1rem; box-shadow:0 6px 20px rgba(18,43,77,0.06); }
+    .muted { color:#6b7b88; }
+    .small { font-size:0.9rem; }
+    .button.primary { background:#0b6fff; color:#fff; padding:0.55rem 0.85rem; border-radius:8px; border:none; font-weight:600; }
+    .button.secondary { border:1px solid #d7eaf8; background:transparent; padding:0.45rem 0.7rem; border-radius:8px; color:#0b2b3f; font-weight:600; }
+    @media (max-width:900px) { .layout { grid-template-columns: 1fr; } .sidebar { width:100% !important; } }
+
+        /* Small helpers (merge into your main stylesheet if preferred) */
+    .card { background:#fff; border-radius:10px; border:1px solid #eef6ff; padding:1rem; box-shadow:0 6px 20px rgba(18,43,77,0.06); }
+    .muted { color:#6b7b88; }
+    .small { font-size:0.95rem; }
+    .policy-list { margin:0.5rem 0 0 1rem; }
+    .policy-section + .policy-section { margin-top:1rem; }
+    @media (max-width:900px) { .layout { grid-template-columns: 1fr; } .sidebar { width:100% !important; } }
 
 /* End of file */
