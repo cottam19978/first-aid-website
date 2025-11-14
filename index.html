@@ -6,6 +6,41 @@
   <title>Excellentia Training Academy Ltd</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Small inline animation styles for the welcome message (ensures the effect works even if style.css hasn't been updated) -->
+  <style>
+    @keyframes fadeSlideUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .hero.welcome-message {
+      animation: fadeSlideUp 900ms ease-out both;
+      will-change: opacity, transform;
+    }
+    .hero.welcome-message h2,
+    .hero.welcome-message p {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeSlideUp 900ms ease-out both;
+    }
+    .hero.welcome-message h2 { animation-delay: 120ms; }
+    .hero.welcome-message p:nth-of-type(1) { animation-delay: 260ms; }
+    .hero.welcome-message p:nth-of-type(2) { animation-delay: 420ms; }
+    .hero.welcome-message p:nth-of-type(3) { animation-delay: 580ms; }
+    @media (prefers-reduced-motion: reduce) {
+      .hero.welcome-message,
+      .hero.welcome-message h2,
+      .hero.welcome-message p {
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* small helper to keep hero-inner centered text readable on narrow screens */
+    @media (max-width:760px) {
+      .hero-inner { padding: 0 0.5rem; }
+    }
+  </style>
 </head>
 <body class="home-bg">
   <div class="container">
@@ -27,7 +62,19 @@
       </ul>
     </nav>
 
-    <section class="hero" aria-label="Hero">
+    <!-- Welcome / Hero (updated with welcome message and animation) -->
+    <section class="hero welcome-message" aria-label="Welcome to Excellentia">
+      <div class="hero-inner">
+        <h2>Welcome to Excellentia</h2>
+        <p>At Excellentia Training Academy, we believe that excellence is not an act—it’s a habit.</p>
+        <p>We are passionate about delivering high-impact training solutions that empower individuals and organisations to thrive in a dynamic, competitive world.</p>
+        <p>Whether you're looking to upskill your workforce, enhance leadership capacity, or align learning with strategy, we are your trusted partner in professional development.</p>
+        <div class="hero-ctas" style="margin-top:0.6rem;">
+        </div>
+      </div>
+    </section>
+
+        <section class="hero" aria-label="Hero">
       <div class="hero-inner">
         <h2>UK’s Trusted First Aid & Safety Training Provider</h2>
         <p>Practical, accredited training for schools, businesses, care settings and members of the public. Book classroom, online or in‑house training with confidence.</p>
@@ -38,19 +85,59 @@
       </div>
     </section>
 
-    <section class="trust-logos compact" aria-label="Accreditations and compliance">
-      <div class="logo-block">
-        <div class="logo-row" role="list">
-          <img src="cpd.png" alt="CPD Accredited" />
-          <img src="faa.png" alt="FAA Approved" />
-          <img src="qualsafe.png" alt="Qualsafe Certified" />
-          <img src="hse.png" alt="HSE Compliant" />
-          <img src="eyfs.png" alt="EYFS Ready" />
-          <img src="ofsted.png" alt="Ofsted Suitable" />
-        </div>
-        <p class="text-center muted" style="margin-top:0.6rem;">CPD accredited courses, recognised awarding bodies, and workplace-appropriate certification.</p>
+<section class="flip-row" aria-label="Four feature flip cards">
+  <article class="flip-card" tabindex="0">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="./empower.png" alt="Empowering" loading="lazy">
+        <h3 class="front-title">Empowering</h3>
       </div>
-    </section>
+      <div class="flip-card-back">
+        <h4>Empower</h4>
+        <p>Our student-focused programs are designed to build confidence, real-world skills, and qualifications that open doors to meaningful employment and further study.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="flip-card" tabindex="0">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="./learning.png" alt="Learning" loading="lazy">
+        <h3 class="front-title">Learning</h3>
+      </div>
+      <div class="flip-card-back">
+        <h4>Learn</h4>
+        <p>Practical, hands-on courses that focus on skill development, assessment readiness, and real-world application.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="flip-card" tabindex="0">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="./industry.png" alt="Industry" loading="lazy">
+        <h3 class="front-title">Industry</h3>
+      </div>
+      <div class="flip-card-back">
+        <h4>Industry</h4>
+        <p>Partnerships and employer-aligned content that help learners move straight into meaningful roles and career pathways.</p>
+      </div>
+    </div>
+  </article>
+
+  <article class="flip-card" tabindex="0">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img src="./Inspire.png" alt="Inspire" loading="lazy">
+        <h3 class="front-title">Inspire</h3>
+      </div>
+      <div class="flip-card-back">
+        <h4>Inspire</h4>
+        <p>Mentorship and learner support that nurture confidence, motivation, and ongoing professional development.</p>
+      </div>
+    </div>
+  </article>
+</section>
 
     <main class="layout">
       <div class="content">
@@ -146,6 +233,20 @@
       </aside>
     </main>
 
+        <section class="trust-logos compact" aria-label="Accreditations and compliance">
+      <div class="logo-block">
+        <div class="logo-row" role="list">
+          <img src="cpd.png" alt="CPD Accredited" />
+          <img src="faa.png" alt="FAA Approved" />
+          <img src="qualsafe.png" alt="Qualsafe Certified" />
+          <img src="hse.png" alt="HSE Compliant" />
+          <img src="eyfs.png" alt="EYFS Ready" />
+          <img src="ofsted.png" alt="Ofsted Suitable" />
+        </div>
+        <p class="text-center muted" style="margin-top:0.6rem;">CPD accredited courses, recognised awarding bodies, and workplace-appropriate certification.</p>
+      </div>
+    </section>
+
     <footer class="site-footer">
       <div class="footer-inner">
         <p>© 2023 Excellentia Training Academy Ltd | Bolton, UK</p>
@@ -180,6 +281,3 @@
   </div>
 </body>
 </html>
-
-
-
