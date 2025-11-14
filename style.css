@@ -48,7 +48,7 @@ body {
 /* Header */
 header { text-align: center; padding: 2rem 0 1rem 0; }
 /* Logo size */
-.logo { max-height: 270px; display: inline-block; margin-bottom: 0.4rem; }
+.logo { max-height: 260px; display: inline-block; margin-bottom: 0.4rem; }
 header h1 { margin: 0.2rem 0; font-size: 1.5rem; font-weight: 800; }
 .tagline { color: var(--muted); margin: 0.25rem 0 0.6rem 0; font-size: 1rem; }
 
@@ -336,4 +336,3 @@ nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--
     @media (max-width:900px) { .layout { grid-template-columns: 1fr; } .sidebar { width:100% !important; } }
 
 /* End of file */
-
