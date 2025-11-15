@@ -47,7 +47,18 @@ body {
 
 /* Header */
 header { text-align: center; padding: 2rem 0 1rem 0; }
-.logo { max-height: 270px; display: inline-block; margin-bottom: 0.4rem; }
+
+/* Header banner / logo — centered and responsive */
+.logo {
+  display: block;
+  margin: 0 auto 0.6rem;
+  width: min(1000px, 96%);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
 header h1 { margin: 0.2rem 0; font-size: 1.5rem; font-weight: 800; }
 .tagline { color: var(--muted); margin: 0.25rem 0 0.6rem 0; font-size: 1rem; }
 
@@ -245,15 +256,25 @@ nav ul.nav a.active { background:var(--primary); color:#fff; box-shadow: 0 6px 1
 .site-footer .footer-inner p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
 /* Responsive adjustments */
-@media (max-width: 1100px) {
-  .special-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 980px) {
   .layout { grid-template-columns: 1fr 300px; }
+  .feature-grid, .course-grid { grid-template-columns: 1fr; }
 }
-@media (max-width: 780px) {
-  .special-grid { grid-template-columns: 1fr; }
-  .special-image { max-width: 100%; }
+@media (max-width: 760px) {
   .container { padding: 1rem; }
   .layout { grid-template-columns: 1fr; }
+  nav ul.nav li { flex: 0 1 140px; }
+  .hero { padding: 1.25rem; }
+  .logo { max-height: 120px; } /* scale down on small screens */
+  header h1 { font-size: 1.35rem; }
+  .feature-grid { grid-template-columns: 1fr; }
+  .course-grid { grid-template-columns: 1fr; }
+  .logo-row img { max-height: 64px; }
+  .sidebar .sticky { position: static; }
+  .popular.compact-popular { margin-bottom: 0.75rem; }
+  .newsletter-card { padding:0.75rem; }
+  .newsletter-small-form input[type="text"],
+  .newsletter-small-form input[type="email"] { padding:0.55rem; font-size:0.95rem; }
 }
 
 /* Accessibility focus outlines */
@@ -291,25 +312,27 @@ nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Inner 3D element */
+/* Inner 3D element — modern aspect and fallback height */
 .flip-card-inner {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  min-height: 200px;
+  aspect-ratio: 4 / 3;            /* modern browsers */
+  min-height: 200px;              /* fallback so container never collapses */
   transform-style: preserve-3d;
   transition: transform 600ms cubic-bezier(.2,.9,.3,1);
 }
+
+/* Provide fallback intrinsic height if aspect-ratio is ignored */
 .flip-card-inner::before {
   content: "";
   display: block;
   width: 100%;
-  padding-top: 75%;
+  padding-top: 75%; /* 3/4 aspect fallback */
   line-height: 0;
   pointer-events: none;
 }
 
-/* Flip triggers */
+/* Flip triggers (hover, focus, and class-based for touch) */
 .flip-card.is-flipped .flip-card-inner,
 .flip-card:hover .flip-card-inner,
 .flip-card:focus-within .flip-card-inner,
@@ -317,11 +340,11 @@ nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--
   transform: rotateY(180deg);
 }
 
-/* Shared faces */
+/* Shared faces — fill the inner area and stack correctly */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
-  inset: 0;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border-radius: 8px;
@@ -331,7 +354,7 @@ nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 0;
+  padding: 0; /* front/back padding handled where needed */
   background-color: #fff;
 }
 
@@ -412,14 +435,14 @@ nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--
   border-radius: 8px;
 }
 
-/* Responsive flip row */
+/* Responsive layout */
 @media (max-width: 1100px) {
   .flip-row { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 780px) {
   .flip-row { grid-template-columns: 1fr; }
   .flip-card-inner { min-height: 180px; aspect-ratio: 16 / 9; }
-  .front-title { font-size: 1rem; padding: 0.45rem 0.75rem; }
+  .front-title { bottom: .8rem; font-size: 1rem; }
 }
 
 /* Slight lift on hover/focus for the card shell */
