@@ -6,7 +6,6 @@
   <title>Excellentia Training Academy Ltd</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <!-- Small inline animation styles for the welcome message (ensures the effect works even if style.css hasn't been updated) -->
   <style>
     @keyframes fadeSlideUp {
       0% { opacity: 0; transform: translateY(20px); }
@@ -36,7 +35,6 @@
       }
     }
 
-    /* small helper to keep hero-inner centered text readable on narrow screens */
     @media (max-width:760px) {
       .hero-inner { padding: 0 0.5rem; }
     }
@@ -62,82 +60,102 @@
       </ul>
     </nav>
 
-    <!-- Welcome / Hero (updated with welcome message and animation) -->
-    <section class="hero welcome-message" aria-label="Welcome to Excellentia">
+    <!-- Welcome / Hero -->
+    <section class="welcome-box hero welcome-message" aria-label="Welcome to Excellentia">
       <div class="hero-inner">
-        <h2>Welcome to Excellentia</h2>
-        <p>At Excellentia Training Academy, we believe that excellence is not an act—it’s a habit.</p>
-        <p>We are passionate about delivering high-impact training solutions that empower individuals and organisations to thrive in a dynamic, competitive world.</p>
-        <p>Whether you're looking to upskill your workforce, enhance leadership capacity, or align learning with strategy, we are your trusted partner in professional development.</p>
-        <div class="hero-ctas" style="margin-top:0.6rem;">
+        <h2 class="welcome-title">Welcome to Excellentia</h2>
+        <div class="welcome-body">
+          <p>At Excellentia Training Academy, we believe that excellence is not an act—it’s a habit.</p>
+          <p>We are passionate about delivering high-impact training solutions that empower individuals and organisations to thrive in a dynamic, competitive world.</p>
+          <p>Whether you're looking to upskill your workforce, enhance leadership capacity, or align learning with strategy, we are your trusted partner in professional development.</p>
         </div>
       </div>
     </section>
 
-        <section class="hero" aria-label="Hero">
-      <div class="hero-inner">
-        <h2>UK’s Trusted First Aid & Safety Training Provider</h2>
-        <p>Practical, accredited training for schools, businesses, care settings and members of the public. Book classroom, online or in‑house training with confidence.</p>
-        <div class="hero-ctas">
-          <a class="button" href="courses.html">View Courses</a>
-          <a class="secondary" href="contact.html">Request a Quote</a>
+    <!-- What Makes Us Special (images updated to your filenames) -->
+    <section class="special-section" aria-label="What Makes Us Special">
+      <h2 class="special-heading">What Makes Us Special?</h2>
+      <div class="special-grid">
+        <div class="special-card">
+          <div class="special-image">
+            <img src="ourmission.png" alt="Our Mission">
+          </div>
+          <h3 class="special-title">Our Mission</h3>
+          <p class="special-text">To empower individuals and organisations through innovative, results-driven training solutions.</p>
+        </div>
+
+        <div class="special-card">
+          <div class="special-image">
+            <img src="whoweare.png" alt="Who We Are">
+          </div>
+          <h3 class="special-title">Who We Are</h3>
+          <p class="special-text">We are a forward-thinking skills development and training provider committed to excellence in learning.</p>
+        </div>
+
+        <div class="special-card">
+          <div class="special-image">
+            <img src="whatwedo.png" alt="What We Do">
+          </div>
+          <h3 class="special-title">What We Do</h3>
+          <p class="special-text">We design and deliver tailored short courses and accredited qualifications training programs across a range of sectors and professional disciplines.</p>
         </div>
       </div>
     </section>
 
-<section class="flip-row" aria-label="Four feature flip cards">
-  <article class="flip-card" tabindex="0">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="./empower.png" alt="Empowering" loading="lazy">
-        <h3 class="front-title">Empowering</h3>
-      </div>
-      <div class="flip-card-back">
-        <h4>Empower</h4>
-        <p>Our student-focused programs are designed to build confidence, real-world skills, and qualifications that open doors to meaningful employment and further study.</p>
-      </div>
-    </div>
-  </article>
+    <!-- Flip cards (your chosen flip images in order) -->
+    <section class="flip-row" aria-label="Four feature flip cards">
+      <article class="flip-card" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./empowering.png" alt="Empowering">
+            <h3 class="front-title">Empowering</h3>
+          </div>
+          <div class="flip-card-back">
+            <h4>Empower</h4>
+            <p>Our student-focused programs are designed to build confidence, real-world skills, and qualifications that open doors to meaningful employment and further study.</p>
+          </div>
+        </div>
+      </article>
 
-  <article class="flip-card" tabindex="0">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="./learning.png" alt="Learning" loading="lazy">
-        <h3 class="front-title">Learning</h3>
-      </div>
-      <div class="flip-card-back">
-        <h4>Learn</h4>
-        <p>Practical, hands-on courses that focus on skill development, assessment readiness, and real-world application.</p>
-      </div>
-    </div>
-  </article>
+      <article class="flip-card" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./learn.png" alt="Learn">
+            <h3 class="front-title">Learn - Your Way</h3>
+          </div>
+          <div class="flip-card-back">
+            <h4>Learn - Your Way</h4>
+            <p>Choose from in-person, virtual, or blended learning. We adapt to your schedule, workforce needs, and preferred delivery style for maximum engagement.</p>
+          </div>
+        </div>
+      </article>
 
-  <article class="flip-card" tabindex="0">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="./industry.png" alt="Industry" loading="lazy">
-        <h3 class="front-title">Industry</h3>
-      </div>
-      <div class="flip-card-back">
-        <h4>Industry</h4>
-        <p>Partnerships and employer-aligned content that help learners move straight into meaningful roles and career pathways.</p>
-      </div>
-    </div>
-  </article>
+      <article class="flip-card" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./industry.png" alt="Industry">
+            <h3 class="front-title">Aligned With Your Industry</h3>
+          </div>
+          <div class="flip-card-back">
+            <h4>Aligned With Your Industry</h4>
+            <p>Our training solutions are aligned with real industry challenges and compliance standards—ensuring relevance and immediate impact in the workplace.</p>
+          </div>
+        </div>
+      </article>
 
-  <article class="flip-card" tabindex="0">
-    <div class="flip-card-inner">
-      <div class="flip-card-front">
-        <img src="./Inspire.png" alt="Inspire" loading="lazy">
-        <h3 class="front-title">Inspire</h3>
-      </div>
-      <div class="flip-card-back">
-        <h4>Inspire</h4>
-        <p>Mentorship and learner support that nurture confidence, motivation, and ongoing professional development.</p>
-      </div>
-    </div>
-  </article>
-</section>
+      <article class="flip-card" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="./excellence.png" alt="Excellence">
+            <h3 class="front-title">Inspire Excellence</h3>
+          </div>
+          <div class="flip-card-back">
+            <h4>Inspire Excellence</h4>
+            <p>Our expert trainers bring industry knowledge, real life scenarios, and a passion for teaching—ensuring every learner receives high-impact, career-focused training.</p>
+          </div>
+        </div>
+      </article>
+    </section>
 
     <main class="layout">
       <div class="content">
@@ -233,7 +251,7 @@
       </aside>
     </main>
 
-        <section class="trust-logos compact" aria-label="Accreditations and compliance">
+    <section class="trust-logos compact" aria-label="Accreditations and compliance">
       <div class="logo-block">
         <div class="logo-row" role="list">
           <img src="cpd.png" alt="CPD Accredited" />
