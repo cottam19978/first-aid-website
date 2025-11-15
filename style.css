@@ -7,8 +7,8 @@
   --muted: #555555;
   --text: #222;
   --hero-bg: linear-gradient(180deg, rgba(238,246,255,0.9), rgba(255,255,255,0.9));
-  --max-width: 1120px;
-  --content-max: 720px;
+  --max-width: clamp(920px, 90vw, 1400px); /* fluid site width */
+  --content-max: clamp(680px, 64vw, 980px);
   --badge-size: 84px;
   --nav-font: 'Open Sans', sans-serif;
   --nav-padding-vertical: 0.9rem;
@@ -42,21 +42,26 @@ body {
   background-color: #fbfdff;
 }
 
-/* Container */
-.container { max-width: var(--max-width); margin: 0 auto; padding: 1.25rem; }
+/* Container: fluid but constrained */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
 
 /* Header */
 header { text-align: center; padding: 2rem 0 1rem 0; }
 
-/* Header banner / logo — centered and responsive */
+/* Header banner / logo — centered and responsive (larger) */
 .logo {
   display: block;
   margin: 0 auto 0.6rem;
-  width: min(1000px, 96%);
+  width: min(1100px, 98%);
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 header h1 { margin: 0.2rem 0; font-size: 1.5rem; font-weight: 800; }
@@ -132,7 +137,7 @@ nav ul.nav a.active { background:var(--primary); color:#fff; box-shadow: 0 6px 1
   overflow: hidden;
   border-radius: 10px;
   width: 100%;
-  max-width: 340px;
+  max-width: 400px;
   aspect-ratio: 4 / 3;
   margin-bottom: 1rem;
   background: #e9e2d0;
@@ -149,14 +154,16 @@ nav ul.nav a.active { background:var(--primary); color:#fff; box-shadow: 0 6px 1
 }
 .special-title {
   color: #ffffff;
-  font-size: 1.18rem;
+  font-size: 1.22rem;
   font-weight: 700;
   margin: 0 0 0.5rem 0;
+  text-align: center;
 }
 .special-text {
   color: #ffffff;
-  font-size: 0.97rem;
+  font-size: 0.98rem;
   max-width: 92%;
+  text-align: center;
 }
 
 /* Trust logos block */
@@ -186,8 +193,14 @@ nav ul.nav a.active { background:var(--primary); color:#fff; box-shadow: 0 6px 1
   margin-right: auto;
 }
 
-/* Layout (main + sidebar) */
-.layout { display: grid; grid-template-columns: 1fr 320px; gap: 1.5rem; align-items:start; margin-bottom: 1.25rem; }
+/* Layout (main + sidebar) — fluid columns */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr min(max(300px, 22vw), 420px);
+  gap: 1.5rem;
+  align-items: start;
+  margin-bottom: 1.25rem;
+}
 .content { max-width: var(--content-max); }
 
 /* Cards */
@@ -256,19 +269,18 @@ nav ul.nav a.active { background:var(--primary); color:#fff; box-shadow: 0 6px 1
 .site-footer .footer-inner p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
 /* Responsive adjustments */
-@media (max-width: 980px) {
+@media (max-width: 1100px) {
+  .special-grid { grid-template-columns: repeat(2, 1fr); }
   .layout { grid-template-columns: 1fr 300px; }
-  .feature-grid, .course-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 880px) {
+  .layout { grid-template-columns: 1fr; }
+  .container { padding: 1rem; }
 }
 @media (max-width: 760px) {
-  .container { padding: 1rem; }
-  .layout { grid-template-columns: 1fr; }
-  nav ul.nav li { flex: 0 1 140px; }
-  .hero { padding: 1.25rem; }
-  .logo { max-height: 120px; } /* scale down on small screens */
+  .special-grid { grid-template-columns: 1fr; }
+  .special-image { max-width: 100%; }
   header h1 { font-size: 1.35rem; }
-  .feature-grid { grid-template-columns: 1fr; }
-  .course-grid { grid-template-columns: 1fr; }
   .logo-row img { max-height: 64px; }
   .sidebar .sticky { position: static; }
   .popular.compact-popular { margin-bottom: 0.75rem; }
@@ -316,8 +328,8 @@ nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--
 .flip-card-inner {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;            /* modern browsers */
-  min-height: 200px;              /* fallback so container never collapses */
+  aspect-ratio: 4 / 3;
+  min-height: 200px;
   transform-style: preserve-3d;
   transition: transform 600ms cubic-bezier(.2,.9,.3,1);
 }
@@ -327,7 +339,7 @@ nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--
   content: "";
   display: block;
   width: 100%;
-  padding-top: 75%; /* 3/4 aspect fallback */
+  padding-top: 75%;
   line-height: 0;
   pointer-events: none;
 }
@@ -344,7 +356,7 @@ nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--
 .flip-card-front,
 .flip-card-back {
   position: absolute;
-  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  inset: 0;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border-radius: 8px;
@@ -354,20 +366,19 @@ nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 0; /* front/back padding handled where needed */
+  padding: 0;
   background-color: #fff;
 }
 
-/* Front side: image full-bleed with title overlay
-   Updated so the H3 (.front-title) sits perfectly centered in the box */
+/* Front side: image full-bleed with title overlay */
 .flip-card-front {
   background-color: #111;
   color: white;
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: center;      /* vertical centering */
-  justify-content: center;  /* horizontal centering */
+  align-items: center;
+  justify-content: center;
 }
 
 /* Make the image fill the front face reliably */
@@ -385,10 +396,10 @@ nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--
   pointer-events: none;
 }
 
-/* Centered H3: remove absolute positioning and place above image using z-index */
+/* Centered H3 */
 .front-title {
-  position: relative;       /* no absolute offsets */
-  z-index: 2;               /* above the image */
+  position: relative;
+  z-index: 2;
   margin: 0;
   font-size: clamp(1rem, 1.6vw, 1.4rem);
   background: rgba(0,0,0,0.45);
@@ -442,7 +453,7 @@ nav a, nav ul.nav a { font-family: var(--nav-font) !important; font-size: var(--
 @media (max-width: 780px) {
   .flip-row { grid-template-columns: 1fr; }
   .flip-card-inner { min-height: 180px; aspect-ratio: 16 / 9; }
-  .front-title { bottom: .8rem; font-size: 1rem; }
+  .front-title { font-size: 1rem; padding: 0.45rem 0.75rem; }
 }
 
 /* Slight lift on hover/focus for the card shell */
